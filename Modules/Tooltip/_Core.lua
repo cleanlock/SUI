@@ -12,12 +12,6 @@ function Module:OnEnable()
     hooksecurefunc("GameTooltip_SetDefaultAnchor", function(tooltip, parent)
       tooltip:SetOwner(parent, "ANCHOR_CURSOR")
     end)
-  else
-    hooksecurefunc("GameTooltip_SetDefaultAnchor", function(tooltip, parent)
-      tooltip:SetOwner(parent, "ANCHOR_NONE")
-      tooltip:ClearAllPoints()
-      tooltip:SetPoint("BOTTOMRIGHT", TooltipFrame, "BOTTOMRIGHT")
-    end)
   end
 
 	if (db.style == "Custom") then
