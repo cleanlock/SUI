@@ -12,6 +12,7 @@ local LSM = LibStub("LibSharedMedia-3.0")
 --   FONT
 -- -----
 LSM:Register("font", "SUI", [[Interface\Addons\SUI\Media\Fonts\Prototype.ttf]]) 
+LSM:Register("font", "Default", STANDARD_TEXT_FONT)
 
 -- -----
 --   SOUND

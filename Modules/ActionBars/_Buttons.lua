@@ -82,7 +82,9 @@ function Module:OnEnable()
         end
       elseif (db.buttons.macro) then
         local na = _G[self:GetName() .. "Name"]
-        na:SetFont(font, db.buttons.size, "OUTLINE")
+        if (na) then
+          na:SetFont(font, db.buttons.size, "OUTLINE")
+        end
       end
 
       local hc = _G[self:GetName() .. "Count"]
