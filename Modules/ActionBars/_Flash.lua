@@ -35,17 +35,6 @@ function Buttons:OnEnable()
       AnimateButton(_G[bname..'Button'..id])
     end)
 
-    hooksecurefunc('PetActionButtonDown', function(id)
-      local button
-        if PetActionBarFrame then
-          if id > NUM_PET_ACTION_SLOTS then return end
-          button = _G["PetActionButton"..id]
-          if not button then return end
-        end
-        return
-      AnimateButton(button)
-    end)
-
     hooksecurefunc('ActionButtonDown', function(id)
       local button
       if C_PetBattles.IsInBattle() then
