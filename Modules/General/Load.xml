@@ -14,8 +14,4 @@
   <Script file="_Sell.lua"/>
   <Script file="_StackBuy.lua"/>
   <Script file="_Stats.lua"/>
-  <Script file="_Commands.lua"/>
-  <Script file="_Fonts.lua"/>
-  <Script file="_Inspect.lua"/>
-  <Script file="_Fonts.lua"/>
 </Ui>
