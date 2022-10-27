@@ -84,6 +84,9 @@ function Module:OnEnable()
         local na = _G[self:GetName() .. "Name"]
         na:SetFont(font, db.buttons.size, "OUTLINE")
       end
+
+      local hc = _G[self:GetName() .. "Count"]
+      hc:SetFont(font, db.buttons.size, "OUTLINE")
     end
     local frame = CreateFrame("Frame")
     frame:RegisterEvent("UPDATE_BINDINGS")
