@@ -56,7 +56,7 @@ function Layout:OnEnable()
           key = 'buttons.size',
           type = 'slider',
           label = 'Text size',
-          max = 50,
+          max = 20,
           column = 4,
           order = 1
         }

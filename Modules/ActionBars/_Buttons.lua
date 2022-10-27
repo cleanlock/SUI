@@ -5,6 +5,7 @@ function Module:OnEnable()
   local dominos = IsAddOnLoaded("Dominos")
   local bartender = IsAddOnLoaded("Bartender4")
   if IsAddOnLoaded("Masque") and (dominos or bartender) then return end
+  font = STANDARD_TEXT_FONT
 
   local textures = {
     textures = {
@@ -60,8 +61,7 @@ function Module:OnEnable()
   end
 
   local db = {
-    buttons = SUI.db.profile.actionbar.buttons,
-    color = SUI.db.profile.general.color
+    buttons = SUI.db.profile.actionbar.buttons
   }
 
   if not dominos and not bartender then
@@ -71,12 +71,18 @@ function Module:OnEnable()
         if ho and ho:IsShown() then
           ho:Hide()
         end
+      elseif (db.buttons.key) then
+        local ho = _G[self:GetName() .. "HotKey"]
+        ho:SetFont(font, db.buttons.size, "OUTLINE")
       end
       if not (db.buttons.macro) then
         local na = _G[self:GetName() .. "Name"]
         if na and na:IsShown() then
             na:Hide()
         end
+      elseif (db.buttons.macro) then
+        local na = _G[self:GetName() .. "Name"]
+        na:SetFont(font, db.buttons.size, "OUTLINE")
       end
     end
     local frame = CreateFrame("Frame")
