@@ -37,12 +37,12 @@ local defaults = {
       portrait = 'Default',
       classcolor = true,
       factioncolor = true,
-      statusglow = false,
       pvpbadge = false,
       combaticon = false,
       hitindicator = false,
       links = false,
       size = 1,
+      playerchain = 'None',
       player = {
         size = 1
       },
@@ -92,21 +92,16 @@ local defaults = {
       alwaysontop = false
     },
     actionbar = {
-      style = 'Default',
       buttons = {
         key = true,
-        macro = false,
+        macro = true,
         range = true,
         flash = false,
-        size = 38,
-        padding = 5
+        size = 12
       },
       menu = {
-        style = 'Default',
-        mouseover = false,
-        hidebag = false,
+        menumouseover = false,
       },
-      gryphones = true,
     },
     castbars = {
       style = 'Custom',

@@ -10,6 +10,7 @@
 	<Script file="_Links.lua"/>
 	<Script file="_Classportrait.lua"/> 
   -->
+	<Script file="_Playerchain.lua"/>
 	<Script file="_Text.lua"/>
 	<Script file="_Combat.lua"/>
 	<Script file="_Classportrait.lua"/>

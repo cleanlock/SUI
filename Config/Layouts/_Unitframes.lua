@@ -59,6 +59,24 @@ function Layout:OnEnable()
         }
       },
       {
+        playerchain = {
+          key = 'unitframes.playerchain',
+          type = 'dropdown',
+          label = 'Player Chain',
+          options = {
+            { value = 'None', text = 'None' },
+            { value = 'elite', text = 'Elite' },
+            { value = 'elitewinged', text = 'Elite (winged)' },
+            { value = 'rare', text = 'Rare' },
+            { value = 'rarewinged', text = 'Rare (winged)'},
+            { value = 'dark', text = 'Dark'},
+            { value = 'darkwinged', text = 'Dark (winged)'},
+          },
+          column = 4,
+          order = 2
+        }
+      },
+      {
         class = {
           key = 'unitframes.classcolor',
           type = 'checkbox',
