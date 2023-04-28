@@ -32,7 +32,9 @@ function Module:OnEnable()
 				--STATUSBAR
 				if (db.texture ~= 'Default') then
 					bar:SetStatusBarTexture(db.texture)
+					bar:GetStatusBarTexture():SetDrawLayer("BORDER")
 					rbar:SetStatusBarTexture(db.texture)
+					rbar:GetStatusBarTexture():SetDrawLayer("BORDER")
 				end
 				--DARK
 				bordertopleft:SetTexture("Interface\\Addons\\SUI\\Media\\Textures\\RaidFrames\\RaidBorder-UpperLeft")

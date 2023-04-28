@@ -5,7 +5,8 @@ function Module:OnEnable()
   if (db) then
     VendorPrice = {}
     local VP = VendorPrice
-
+    ContainerIDToInventoryID = C_Container.ContainerIDToInventoryID
+    GetContainerItemInfo = C_Container.GetContainerItemInfo
     local SELL_PRICE_TEXT = format("%s:", SELL_PRICE)
 
     local CharacterBags = {}

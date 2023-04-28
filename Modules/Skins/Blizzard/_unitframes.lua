@@ -700,19 +700,19 @@ function Module:OnEnable()
 		end
 	
 		-- Gossip Frame
-		local a, b, c, d, e, f, g, h, i = GossipFrameGreetingPanel:GetRegions()
-		for _, v in pairs({a, b, c, d, e, f, g, h, i}) do
-			v:SetVertexColor(0.35,0.35,0.35)
-		end
+		-- local a, b, c, d, e, f, g, h, i = GossipFrameGreetingPanel:GetRegions()
+		-- for _, v in pairs({a, b, c, d, e, f, g, h, i}) do
+		-- 	v:SetVertexColor(0.35,0.35,0.35)
+		-- end
 	
-		if not GossipFrameGreetingPanel.Material then 
-			GossipFrameGreetingPanel.Material = GossipFrameGreetingPanel:CreateTexture(nil, 'OVERLAY', nil, 7)
-			GossipFrameGreetingPanel.Material:SetTexture("Interface\\AddOns\\SUI\\Media\\Textures\\UnitFrames\\Quest\\QuestBG")
-			GossipFrameGreetingPanel.Material:SetWidth(514)
-			GossipFrameGreetingPanel.Material:SetHeight(522)
-			GossipFrameGreetingPanel.Material:SetPoint('TOPLEFT', GossipFrameGreetingPanel, 22, -74)
-			GossipFrameGreetingPanel.Material:SetVertexColor(0.7,0.7,0.7)
-		end
+		-- if not GossipFrameGreetingPanel.Material then 
+		-- 	GossipFrameGreetingPanel.Material = GossipFrameGreetingPanel:CreateTexture(nil, 'OVERLAY', nil, 7)
+		-- 	GossipFrameGreetingPanel.Material:SetTexture("Interface\\AddOns\\SUI\\Media\\Textures\\UnitFrames\\Quest\\QuestBG")
+		-- 	GossipFrameGreetingPanel.Material:SetWidth(514)
+		-- 	GossipFrameGreetingPanel.Material:SetHeight(522)
+		-- 	GossipFrameGreetingPanel.Material:SetPoint('TOPLEFT', GossipFrameGreetingPanel, 22, -74)
+		-- 	GossipFrameGreetingPanel.Material:SetVertexColor(0.7,0.7,0.7)
+		-- end
 	
 		-- Quest Frame Reward panel
 		local a, b, c, d, e, f, g, h, i = QuestFrameRewardPanel:GetRegions()

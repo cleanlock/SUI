@@ -1,5 +1,7 @@
 local Module = SUI:NewModule("General.Sell");
-
+local GetContainerNumSlots = C_Container.GetContainerNumSlots
+local GetContainerItemLink = C_Container.GetContainerItemLink
+local UseContainerItem = C_Container.UseContainerItem
 function Module:OnEnable()
   local db = SUI.db.profile.general.automation.sell
   if (db) then

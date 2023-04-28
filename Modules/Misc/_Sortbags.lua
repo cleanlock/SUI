@@ -1,5 +1,11 @@
 local Module = SUI:NewModule("Misc.Sortbags");
-
+local GetBagName = C_Container.GetBagName
+local PickupContainerItem = C_Container.PickupContainerItem
+local GetContainerNumSlots = C_Container.GetContainerNumSlots
+local GetContainerItemInfo = C_Container.GetContainerItemInfo
+local GetContainerItemLink = C_Container.GetContainerItemLink
+local GetBagSlotFlag = C_Container.GetBagSlotFlag
+local GetBankBagSlotFlag = C_Container.GetBankBagSlotFlag
 function Module:OnEnable()
     local db = SUI.db.profile.misc.sortbags
     if (db) then
@@ -210,10 +216,10 @@ function Module:OnEnable()
         end
 
         function Move(src, dst)
-            local texture, _, srcLocked = GetContainerItemInfo(src.container, src.position)
-            local _, _, dstLocked = GetContainerItemInfo(dst.container, dst.position)
+            local srcContainerInfo = GetContainerItemInfo(src.container, src.position)
+            local dstContainerInfo = GetContainerItemInfo(dst.container, dst.position)
 
-            if texture and not srcLocked and not dstLocked then
+            if srcContainerInfo and not srcContainerInfo.isLocked and (not dstContainerInfo or not dstContainerInfo.isLocked) then
                 ClearCursor()
                 PickupContainerItem(src.container, src.position)
                 PickupContainerItem(dst.container, dst.position)
@@ -380,13 +386,13 @@ function Module:OnEnable()
                         local slot = {container=container, position=position, class=class}
                         local item = Item(container, position)
                         if item then
-                            local _, count, locked = GetContainerItemInfo(container, position)
-                            if locked then
+                            local containerInfo = GetContainerItemInfo(container, position)
+                            if containerInfo and containerInfo.isLocked then
                                 return false
                             end
                             slot.item = item
-                            slot.count = count
-                            counts[item] = (counts[item] or 0) + count
+                            slot.count = containerInfo.stackCount
+                            counts[item] = (counts[item] or 0) + containerInfo.stackCount
                         end
                         insert(model, slot)
                     end

@@ -74,7 +74,7 @@ function Module:OnEnable()
       bu.bg:SetPoint("BOTTOMRIGHT", bu, "BOTTOMRIGHT", 4, -4)
       bu.bg:SetFrameLevel(bu:GetFrameLevel() - 1)
       if config.background.showbg and not config.background.useflatbackground then
-        local t = bu.bg:CreateTexture(nil, "BACKGROUND", -8)
+        local t = bu.bg:CreateTexture(nil, "BACKGROUND")
         t:SetTexture(config.textures.buttonback)
         t:SetVertexColor(unpack(SUI:Color()))
       end
@@ -221,7 +221,7 @@ function Module:OnEnable()
       if not bu or (bu and bu.rabs_styled) then return end
       local name = bu:GetName()
       local nt = bu:GetNormalTexture()
-      local bo = bu:CreateTexture(name .. "Border", "BACKGROUND", nil, -7)
+      local bo = bu:CreateTexture(name .. "Border", "BACKGROUND", nil)
       nt:SetTexCoord(0.2, 0.8, 0.2, 0.8)
       nt:SetPoint("TOPLEFT", bu, "TOPLEFT", 2, -2)
       nt:SetPoint("BOTTOMRIGHT", bu, "BOTTOMRIGHT", -2, 2)
