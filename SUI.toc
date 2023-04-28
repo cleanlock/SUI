@@ -1,6 +1,6 @@
-## Interface: 30400
+## Interface: 30401
 ## Author: Muleyo & Syiana
-## Version: 1.36
+## Version: 1.37
 ## Title: |cfff58cbaS|r|cff009cffUI|r Classic
 ## Notes: Made with <3 by Syiana & Muleyo
 ## SavedVariables: SUIDB
